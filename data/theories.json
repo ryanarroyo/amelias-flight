@@ -1,0 +1,41 @@
+{
+  "intro": "Amelia Earhart and navigator Fred Noonan vanished on July 2, 1937, somewhere over the central Pacific on the leg from Lae to Howland Island. No wreckage has ever been conclusively found. In the decades since, the silence has been filled by a remarkable number of competing explanations — ranging from the soberly mainstream to the openly fringe. Here are the major ones.",
+  "theories": [
+    {
+      "id": "crash-and-sank",
+      "title": "Crash and Sank",
+      "stance": "Mainstream / most widely accepted",
+      "summary": "The simplest explanation: unable to find the tiny speck of Howland Island, the Electra ran out of fuel and ditched into the deep Pacific, sinking within sight of nowhere. This is the official position of the U.S. government and most historians, supported by the final radio transmissions in which Earhart reported running low on fuel and searching along a navigational line.",
+      "hook": "Sometimes the ocean is answer enough."
+    },
+    {
+      "id": "nikumaroro-castaway",
+      "title": "The Castaway of Nikumaroro",
+      "stance": "Actively researched / contested",
+      "summary": "Championed by TIGHAR, this hypothesis holds that Earhart turned south along her navigational line and landed on the uninhabited reef of Gardner Island — now Nikumaroro — surviving for a time as a castaway before dying there. Decades of expeditions have surfaced suggestive artifacts, a partial skeleton recorded in 1940, and a re-analysis arguing the bones' proportions match Earhart. None of it is conclusive, and the debate continues.",
+      "hook": "A reef, a campfire, and bones that may or may not be hers."
+    },
+    {
+      "id": "japanese-capture",
+      "title": "Captured by the Japanese",
+      "stance": "Fringe / unsupported by hard evidence",
+      "summary": "A persistent strand of theories claims Earhart drifted into Japanese-controlled waters in the Marshall Islands, was taken prisoner, and died — or was executed — in captivity on Saipan. Proponents cite secondhand island testimony and a disputed photograph; mainstream historians regard the evidence as anecdotal and circumstantial.",
+      "hook": "Whispers of a prisoner who never came home."
+    },
+    {
+      "id": "secret-spy-mission",
+      "title": "The Secret Spy Mission",
+      "stance": "Speculative / often paired with capture theory",
+      "summary": "Some accounts cast the world flight as cover for covert aerial reconnaissance of Japanese-held Pacific islands on behalf of the U.S. government, with the disappearance a consequence of that mission. It is a compelling story with little documentary support, and it usually travels alongside the capture theories.",
+      "hook": "Was the flight ever really just a flight?"
+    },
+    {
+      "id": "assumed-identity",
+      "title": "The Woman Who Came Back",
+      "stance": "Debunked / culturally persistent",
+      "summary": "The most romantic and least credible theory: that Earhart survived, returned quietly to the United States, and lived out her life under an assumed name — most famously identified as a New Jersey woman named Irene Bolam, who sued over the claim. It has been thoroughly debunked, yet it endures as a testament to how badly people wanted her to have lived.",
+      "hook": "A hope so strong it invented a happy ending."
+    }
+  ],
+  "closing": "Five explanations, one disappearance. That the list keeps growing — and that serious people still mount expeditions nearly a century later — is itself part of Amelia Earhart's legacy: a mystery vast enough to hold all of our questions."
+}

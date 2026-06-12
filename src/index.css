@@ -1,0 +1,49 @@
+/* Global tokens & resets — ported from the approved design's <helmet> block. */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f6f4ef;
+}
+#root {
+  min-height: 100vh;
+}
+::selection {
+  background: #b23a33;
+  color: #fff;
+}
+
+@keyframes amFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes amFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes amCue {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.65;
+    transform: translateY(7px);
+  }
+}

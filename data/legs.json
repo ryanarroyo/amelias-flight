@@ -1,0 +1,302 @@
+[
+  {
+    "seq": 1,
+    "date": "1937-05-21",
+    "origin": { "name": "Oakland, California, USA", "lat": 37.7214, "lon": -122.2208 },
+    "destination": { "name": "Burbank, California, USA", "lat": 34.2007, "lon": -118.3590 },
+    "distance_mi": 325,
+    "distance_km": 523,
+    "caption": "A quiet shakedown hop south, the Electra stretching her legs before the world.",
+    "status": "completed"
+  },
+  {
+    "seq": 2,
+    "date": "1937-05-21",
+    "origin": { "name": "Burbank, California, USA", "lat": 34.2007, "lon": -118.3590 },
+    "destination": { "name": "Tucson, Arizona, USA", "lat": 32.1161, "lon": -110.9410 },
+    "distance_mi": 450,
+    "distance_km": 724,
+    "caption": "Out across the desert, an engine fire at Tucson a small omen brushed aside.",
+    "status": "completed"
+  },
+  {
+    "seq": 3,
+    "date": "1937-05-22",
+    "origin": { "name": "Tucson, Arizona, USA", "lat": 32.1161, "lon": -110.9410 },
+    "destination": { "name": "New Orleans, Louisiana, USA", "lat": 29.9934, "lon": -90.2581 },
+    "distance_mi": 1250,
+    "distance_km": 2012,
+    "caption": "A long pull across the American South toward the Gulf.",
+    "status": "completed"
+  },
+  {
+    "seq": 4,
+    "date": "1937-05-23",
+    "origin": { "name": "New Orleans, Louisiana, USA", "lat": 29.9934, "lon": -90.2581 },
+    "destination": { "name": "Miami, Florida, USA", "lat": 25.7959, "lon": -80.2870 },
+    "distance_mi": 675,
+    "distance_km": 1086,
+    "caption": "Last leg of the shakedown, the Electra dropping into Miami for final overhaul.",
+    "status": "completed"
+  },
+  {
+    "seq": 5,
+    "date": "1937-06-01",
+    "origin": { "name": "Miami, Florida, USA", "lat": 25.7959, "lon": -80.2870 },
+    "destination": { "name": "San Juan, Puerto Rico", "lat": 18.4394, "lon": -66.0018 },
+    "distance_mi": 1033,
+    "distance_km": 1662,
+    "caption": "The official world flight begins, southeast over open Caribbean water.",
+    "status": "completed"
+  },
+  {
+    "seq": 6,
+    "date": "1937-06-02",
+    "origin": { "name": "San Juan, Puerto Rico", "lat": 18.4394, "lon": -66.0018 },
+    "destination": { "name": "Caripito, Venezuela", "lat": 10.1069, "lon": -63.0972 },
+    "distance_mi": 750,
+    "distance_km": 1207,
+    "caption": "Across the Antilles to the oil town of Caripito on the South American mainland.",
+    "status": "completed"
+  },
+  {
+    "seq": 7,
+    "date": "1937-06-03",
+    "origin": { "name": "Caripito, Venezuela", "lat": 10.1069, "lon": -63.0972 },
+    "destination": { "name": "Paramaribo, Surinam", "lat": 5.4528, "lon": -55.1878 },
+    "distance_mi": 667,
+    "distance_km": 1073,
+    "caption": "Skirting the Guiana coast above jungle and muddy river mouths.",
+    "status": "completed"
+  },
+  {
+    "seq": 8,
+    "date": "1937-06-04",
+    "origin": { "name": "Paramaribo, Surinam", "lat": 5.4528, "lon": -55.1878 },
+    "destination": { "name": "Fortaleza, Brazil", "lat": -3.7763, "lon": -38.5326 },
+    "distance_mi": 1200,
+    "distance_km": 1931,
+    "caption": "A long equatorial run down the Brazilian bulge to Fortaleza.",
+    "status": "completed"
+  },
+  {
+    "seq": 9,
+    "date": "1937-06-06",
+    "origin": { "name": "Fortaleza, Brazil", "lat": -3.7763, "lon": -38.5326 },
+    "destination": { "name": "Natal, Brazil", "lat": -5.9111, "lon": -35.2477 },
+    "distance_mi": 268,
+    "distance_km": 431,
+    "caption": "A short hop to Natal, last land before the great South Atlantic crossing.",
+    "status": "completed"
+  },
+  {
+    "seq": 10,
+    "date": "1937-06-07",
+    "origin": { "name": "Natal, Brazil", "lat": -5.9111, "lon": -35.2477 },
+    "destination": { "name": "Saint-Louis, Senegal, French West Africa", "lat": 16.0510, "lon": -16.4630 },
+    "distance_mi": 1961,
+    "distance_km": 3156,
+    "caption": "The ocean crossing to Africa, made by night and landfall north of intended Dakar.",
+    "status": "completed"
+  },
+  {
+    "seq": 11,
+    "date": "1937-06-08",
+    "origin": { "name": "Saint-Louis, Senegal, French West Africa", "lat": 16.0510, "lon": -16.4630 },
+    "destination": { "name": "Dakar, Senegal, French West Africa", "lat": 14.6708, "lon": -17.0731 },
+    "distance_mi": 103,
+    "distance_km": 166,
+    "caption": "A brief southward correction down the Senegal coast to Dakar proper.",
+    "status": "completed"
+  },
+  {
+    "seq": 12,
+    "date": "1937-06-10",
+    "origin": { "name": "Dakar, Senegal, French West Africa", "lat": 14.6708, "lon": -17.0731 },
+    "destination": { "name": "Gao, French Sudan", "lat": 16.2484, "lon": -0.0055 },
+    "distance_mi": 1130,
+    "distance_km": 1819,
+    "caption": "Inland over the Sahel to the Niger River town of Gao.",
+    "status": "completed"
+  },
+  {
+    "seq": 13,
+    "date": "1937-06-11",
+    "origin": { "name": "Gao, French Sudan", "lat": 16.2484, "lon": -0.0055 },
+    "destination": { "name": "Fort-Lamy, French Equatorial Africa", "lat": 12.1337, "lon": 15.0340 },
+    "distance_mi": 989,
+    "distance_km": 1592,
+    "caption": "Across the desert frontier to Fort-Lamy on the edge of Lake Chad.",
+    "status": "completed"
+  },
+  {
+    "seq": 14,
+    "date": "1937-06-12",
+    "origin": { "name": "Fort-Lamy, French Equatorial Africa", "lat": 12.1337, "lon": 15.0340 },
+    "destination": { "name": "El Fasher, Anglo-Egyptian Sudan", "lat": 13.6147, "lon": 25.3246 },
+    "distance_mi": 700,
+    "distance_km": 1127,
+    "caption": "Eastward over Darfur scrub to the garrison town of El Fasher.",
+    "status": "completed"
+  },
+  {
+    "seq": 15,
+    "date": "1937-06-13",
+    "origin": { "name": "El Fasher, Anglo-Egyptian Sudan", "lat": 13.6147, "lon": 25.3246 },
+    "destination": { "name": "Khartoum, Anglo-Egyptian Sudan", "lat": 15.5895, "lon": 32.5532 },
+    "distance_mi": 501,
+    "distance_km": 806,
+    "caption": "On to Khartoum where the Blue and White Niles meet.",
+    "status": "completed"
+  },
+  {
+    "seq": 16,
+    "date": "1937-06-13",
+    "origin": { "name": "Khartoum, Anglo-Egyptian Sudan", "lat": 15.5895, "lon": 32.5532 },
+    "destination": { "name": "Massawa, Eritrea", "lat": 15.6100, "lon": 39.4500 },
+    "distance_mi": 450,
+    "distance_km": 724,
+    "caption": "Down to the Red Sea port of Massawa under Italian colonial rule.",
+    "status": "completed"
+  },
+  {
+    "seq": 17,
+    "date": "1937-06-14",
+    "origin": { "name": "Massawa, Eritrea", "lat": 15.6100, "lon": 39.4500 },
+    "destination": { "name": "Assab, Eritrea", "lat": 13.0667, "lon": 42.7333 },
+    "distance_mi": 300,
+    "distance_km": 483,
+    "caption": "Hugging the Red Sea shore south to Assab near the strait.",
+    "status": "completed"
+  },
+  {
+    "seq": 18,
+    "date": "1937-06-15",
+    "origin": { "name": "Assab, Eritrea", "lat": 13.0667, "lon": 42.7333 },
+    "destination": { "name": "Karachi, India (now Pakistan)", "lat": 24.9008, "lon": 67.1681 },
+    "distance_mi": 1600,
+    "distance_km": 2575,
+    "caption": "A bold nonstop across the Arabian Sea, a flight never before flown.",
+    "status": "completed"
+  },
+  {
+    "seq": 19,
+    "date": "1937-06-17",
+    "origin": { "name": "Karachi, India (now Pakistan)", "lat": 24.9008, "lon": 67.1681 },
+    "destination": { "name": "Calcutta, India", "lat": 22.6547, "lon": 88.4467 },
+    "distance_mi": 1390,
+    "distance_km": 2237,
+    "caption": "The length of British India to monsoon-soaked Calcutta.",
+    "status": "completed"
+  },
+  {
+    "seq": 20,
+    "date": "1937-06-18",
+    "origin": { "name": "Calcutta, India", "lat": 22.6547, "lon": 88.4467 },
+    "destination": { "name": "Akyab, Burma", "lat": 20.1327, "lon": 92.8726 },
+    "distance_mi": 335,
+    "distance_km": 539,
+    "caption": "Across the Bay of Bengal to Akyab through driving rain.",
+    "status": "completed"
+  },
+  {
+    "seq": 21,
+    "date": "1937-06-19",
+    "origin": { "name": "Akyab, Burma", "lat": 20.1327, "lon": 92.8726 },
+    "destination": { "name": "Rangoon, Burma", "lat": 16.9073, "lon": 96.1332 },
+    "distance_mi": 306,
+    "distance_km": 492,
+    "caption": "Beaten back once by storms, then through to Rangoon along the coast.",
+    "status": "completed"
+  },
+  {
+    "seq": 22,
+    "date": "1937-06-20",
+    "origin": { "name": "Rangoon, Burma", "lat": 16.9073, "lon": 96.1332 },
+    "destination": { "name": "Bangkok, Siam", "lat": 13.9126, "lon": 100.6068 },
+    "distance_mi": 300,
+    "distance_km": 483,
+    "caption": "Over the Tenasserim hills into the kingdom of Siam.",
+    "status": "completed"
+  },
+  {
+    "seq": 23,
+    "date": "1937-06-20",
+    "origin": { "name": "Bangkok, Siam", "lat": 13.9126, "lon": 100.6068 },
+    "destination": { "name": "Singapore, Straits Settlements", "lat": 1.3644, "lon": 103.9915 },
+    "distance_mi": 904,
+    "distance_km": 1455,
+    "caption": "Down the Malay Peninsula to the great British port of Singapore.",
+    "status": "completed"
+  },
+  {
+    "seq": 24,
+    "date": "1937-06-21",
+    "origin": { "name": "Singapore, Straits Settlements", "lat": 1.3644, "lon": 103.9915 },
+    "destination": { "name": "Bandoeng, Java, Dutch East Indies", "lat": -6.9006, "lon": 107.5762 },
+    "distance_mi": 560,
+    "distance_km": 901,
+    "caption": "Across the equator to the cool highland field at Bandoeng.",
+    "status": "completed"
+  },
+  {
+    "seq": 25,
+    "date": "1937-06-24",
+    "origin": { "name": "Bandoeng, Java, Dutch East Indies", "lat": -6.9006, "lon": 107.5762 },
+    "destination": { "name": "Soerabaja, Java, Dutch East Indies", "lat": -7.3798, "lon": 112.7869 },
+    "distance_mi": 355,
+    "distance_km": 571,
+    "caption": "Eastward along Java toward Australia, but the instruments were failing.",
+    "status": "completed"
+  },
+  {
+    "seq": 26,
+    "date": "1937-06-25",
+    "origin": { "name": "Soerabaja, Java, Dutch East Indies", "lat": -7.3798, "lon": 112.7869 },
+    "destination": { "name": "Bandoeng, Java, Dutch East Indies", "lat": -6.9006, "lon": 107.5762 },
+    "distance_mi": 355,
+    "distance_km": 571,
+    "caption": "The hardest thing in aviation: turning back to Bandoeng for repairs.",
+    "status": "completed"
+  },
+  {
+    "seq": 27,
+    "date": "1937-06-27",
+    "origin": { "name": "Bandoeng, Java, Dutch East Indies", "lat": -6.9006, "lon": 107.5762 },
+    "destination": { "name": "Koepang, Timor, Dutch East Indies", "lat": -10.1718, "lon": 123.6710 },
+    "distance_mi": 1165,
+    "distance_km": 1875,
+    "caption": "Over Bali and Sumbawa and the Arafura Sea to Timor's far shore.",
+    "status": "completed"
+  },
+  {
+    "seq": 28,
+    "date": "1937-06-28",
+    "origin": { "name": "Koepang, Timor, Dutch East Indies", "lat": -10.1718, "lon": 123.6710 },
+    "destination": { "name": "Port Darwin, Australia", "lat": -12.4147, "lon": 130.8767 },
+    "distance_mi": 500,
+    "distance_km": 805,
+    "caption": "The Timor Sea crossing to Darwin, where the parachutes were shipped home.",
+    "status": "completed"
+  },
+  {
+    "seq": 29,
+    "date": "1937-06-29",
+    "origin": { "name": "Port Darwin, Australia", "lat": -12.4147, "lon": 130.8767 },
+    "destination": { "name": "Lae, Territory of New Guinea", "lat": -6.7322, "lon": 146.9964 },
+    "distance_mi": 1207,
+    "distance_km": 1943,
+    "caption": "Up over the Coral Sea to Lae, the last airfield she would ever land on.",
+    "status": "completed"
+  },
+  {
+    "seq": 30,
+    "date": "1937-07-02",
+    "origin": { "name": "Lae, Territory of New Guinea", "lat": -6.7322, "lon": 146.9964 },
+    "destination": { "name": "Howland Island, USA", "lat": 0.8062, "lon": -176.6175 },
+    "distance_mi": 2556,
+    "distance_km": 4113,
+    "caption": "Into the Pacific dawn toward a speck of coral she never reached.",
+    "status": "final-vanished"
+  }
+]
