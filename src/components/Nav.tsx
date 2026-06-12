@@ -66,6 +66,7 @@ export default function Nav({ view, setView }: { view: View; setView: (v: View) 
       </div>
       <div style={{ display: 'flex', gap: 18 }}>
         <NavButton label="The Flight" active={view === 'flight'} onClick={() => setView('flight')} />
+        <NavButton label="The Pilots" active={view === 'pilots'} onClick={() => setView('pilots')} />
         <NavButton label="The Electra" active={view === 'electra'} onClick={() => setView('electra')} />
         <NavButton label="Theories" active={view === 'theories'} onClick={() => setView('theories')} />
       </div>

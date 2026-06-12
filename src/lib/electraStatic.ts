@@ -44,8 +44,9 @@ export const ELECTRA_BODY = `
           <div style="display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid rgba(28,27,24,0.1);"><span style="color:#756f64;font-size:13.5px;">First flight</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;text-align:right;">Feb 23, 1934</span></div>
           <div style="display:flex;justify-content:space-between;gap:12px;padding:11px 0;"><span style="color:#756f64;font-size:13.5px;">Total built</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;text-align:right;">149 &middot; 15 were 10-E</span></div>
         </div>
-        <div style="margin-top:20px;aspect-ratio:3/2;border:1px solid rgba(28,27,24,0.12);background:repeating-linear-gradient(45deg,#efece6,#efece6 9px,#e8e4dc 9px,#e8e4dc 18px);display:flex;align-items:flex-end;padding:11px;border-radius:3px;">
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#756f64;background:rgba(246,244,239,0.85);padding:4px 8px;border-radius:2px;">NR16020 at Burbank, 1937 &mdash; archival photo to be added</div>
+        <div style="margin-top:20px;aspect-ratio:3/2;border:1px solid rgba(28,27,24,0.12);background:#e8e4dc;display:flex;align-items:flex-end;padding:11px;border-radius:3px;position:relative;overflow:hidden;">
+          <img src="/photos/electra-nr16020.jpg" alt="Amelia Earhart with her Lockheed Model 10-E Electra, 1937" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%;display:block;" />
+          <div style="position:relative;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#756f64;background:rgba(246,244,239,0.85);padding:4px 8px;border-radius:2px;">Earhart with NR16020 &middot; Underwood &amp; Underwood, 1937</div>
         </div>
       </div>
 

@@ -1,8 +1,19 @@
 import type { CSSProperties } from 'react'
 import { THEORIES } from '../data/amelia'
+import type { PhotoData } from '../lib/photo'
+import FramedPhoto from './FramedPhoto'
 
 const mono: CSSProperties = { fontFamily: "'IBM Plex Mono',monospace" }
 const serif: CSSProperties = { fontFamily: "'Newsreader',serif" }
+
+// Earhart and Noonan before the final leg. Wide banner crop biased toward their faces.
+const HEADER_PHOTO: PhotoData = {
+  src: '/photos/earhart-noonan.jpg',
+  alt: 'Amelia Earhart and navigator Fred Noonan standing together in front of the Electra, 1937',
+  caption: 'Amelia Earhart and Fred Noonan, 1937',
+  credit: 'San Diego Air & Space Museum',
+  objectPosition: 'center 8%',
+}
 
 export default function TheoriesPage() {
   return (
@@ -45,24 +56,12 @@ export default function TheoriesPage() {
         {THEORIES.intro}
       </p>
 
-      <div
-        style={{
-          marginTop: 30,
-          aspectRatio: '16 / 7',
-          border: '1px solid rgba(28,27,24,0.12)',
-          background: 'repeating-linear-gradient(45deg,#efece6,#efece6 9px,#e8e4dc 9px,#e8e4dc 18px)',
-          display: 'flex',
-          alignItems: 'flex-end',
-          padding: 13,
-          borderRadius: 3,
-        }}
-      >
-        <div
-          style={{ ...mono, fontSize: 10, color: '#756f64', background: 'rgba(246,244,239,0.85)', padding: '4px 8px', borderRadius: 2 }}
-        >
-          Earhart and Noonan before the final leg, Lae — photo to be added
-        </div>
-      </div>
+      <FramedPhoto
+        photo={HEADER_PHOTO}
+        placeholderCaption="Earhart and Noonan before the final leg, Lae — photo to be added"
+        aspect="16 / 7"
+        marginTop={30}
+      />
 
       <div style={{ marginTop: 18 }}>
         {THEORIES.theories.map((t) => (

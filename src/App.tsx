@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import Nav from './components/Nav'
 import FlightPage from './components/FlightPage'
+import PilotsPage from './components/PilotsPage'
 import ElectraPage from './components/ElectraPage'
 import TheoriesPage from './components/TheoriesPage'
 
-export type View = 'flight' | 'electra' | 'theories'
+export type View = 'flight' | 'pilots' | 'electra' | 'theories'
 
 const rootStyle: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans',system-ui,sans-serif",
@@ -40,6 +41,7 @@ export default function App() {
     <div style={rootStyle}>
       <Nav view={view} setView={setView} />
       {view === 'flight' && <FlightPage />}
+      {view === 'pilots' && <PilotsPage />}
       {view === 'electra' && <ElectraPage />}
       {view === 'theories' && <TheoriesPage />}
     </div>

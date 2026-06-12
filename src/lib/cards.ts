@@ -2,6 +2,7 @@
 // markers, and image placeholders — ported from the design's prep().
 
 import { LEGS } from '../data/amelia'
+import type { PhotoData } from './photo'
 
 export interface CardData {
   seq: number
@@ -16,6 +17,7 @@ export interface CardData {
   isHero: boolean
   heroTitle: string
   imageCaption: string
+  image?: PhotoData
 }
 
 const CH: Record<number, [string, string, string]> = {
@@ -37,6 +39,24 @@ const HERO: Record<number, string> = {
 const IMG: Record<number, string> = {
   5: 'Earhart and the Lockheed Electra 10E, Miami — archival photo to be added',
   29: 'Lae airfield, New Guinea, July 1937 — photo to be added',
+}
+
+// Real archival photos by leg seq. Legs without an entry fall back to the
+// captioned placeholder frame.
+const PHOTOS: Record<number, PhotoData> = {
+  5: {
+    src: '/photos/earhart-electra.jpg',
+    alt: 'Amelia Earhart standing in front of her Lockheed Electra 10E, registration NR16020, 1937',
+    caption: 'Earhart with the Electra, NR16020',
+    credit: 'NASA · public domain',
+  },
+  29: {
+    src: '/photos/darwin-1937.jpg',
+    alt: 'Amelia Earhart boarding the Electra at Darwin, Australia, 28 June 1937',
+    caption: 'Boarding at Darwin, 28 June 1937 — four days before Lae',
+    credit: 'Purdue University · public domain',
+    objectPosition: 'center 22%',
+  },
 }
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -62,5 +82,6 @@ export const CARDS: CardData[] = LEGS.slice(0, 29).map((l) => {
     isHero: !!HERO[l.seq],
     heroTitle: HERO[l.seq] || '',
     imageCaption: IMG[l.seq] || '',
+    image: PHOTOS[l.seq],
   }
 })

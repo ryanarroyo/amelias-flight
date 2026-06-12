@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react'
 import type { CardData } from '../lib/cards'
+import FramedPhoto from './FramedPhoto'
 
 const section: CSSProperties = {
   minHeight: '92vh',
@@ -104,33 +105,7 @@ export default function StepCard({ card }: { card: CardData }) {
           {card.distLabel}
         </div>
         {card.imageCaption && (
-          <div
-            style={{
-              marginTop: 16,
-              aspectRatio: '3 / 2',
-              border: '1px solid rgba(28,27,24,0.12)',
-              background:
-                'repeating-linear-gradient(45deg,#efece6,#efece6 9px,#e8e4dc 9px,#e8e4dc 18px)',
-              display: 'flex',
-              alignItems: 'flex-end',
-              padding: 11,
-              borderRadius: 3,
-            }}
-          >
-            <div
-              style={{
-                ...mono,
-                fontSize: 10,
-                lineHeight: 1.4,
-                color: '#756f64',
-                background: 'rgba(246,244,239,0.85)',
-                padding: '4px 7px',
-                borderRadius: 2,
-              }}
-            >
-              {card.imageCaption}
-            </div>
-          </div>
+          <FramedPhoto photo={card.image} placeholderCaption={card.imageCaption} aspect="3 / 2" marginTop={16} />
         )}
       </div>
     </div>
