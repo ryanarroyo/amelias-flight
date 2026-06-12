@@ -1,8 +1,19 @@
 import { useState, type CSSProperties } from 'react'
 import { PLAN_SVG, BLUEPRINT_SVG, PERSPECTIVE_SVG } from '../lib/electraSvgs'
 import { ELECTRA_HEADER, ELECTRA_BODY } from '../lib/electraStatic'
+import type { PhotoData } from '../lib/photo'
+import FramedPhoto from './FramedPhoto'
 
 type Schematic = 'plan' | 'blueprint' | 'persp'
+
+// A real archival photo of the Lockheed Model 10 Electra (same model as NR16020).
+const ELECTRA_PHOTO: PhotoData = {
+  src: '/photos/electra-aircraft.jpg',
+  alt: 'A Lockheed Model 10A Electra airliner, registration NC233Y, on the ground in the 1930s',
+  caption: "A Lockheed Model 10A Electra (NC233Y) — sister to Earhart's 10-E",
+  credit: 'San Diego Air & Space Museum',
+  objectPosition: 'center 48%',
+}
 
 const mono: CSSProperties = { fontFamily: "'IBM Plex Mono',monospace" }
 
@@ -51,6 +62,14 @@ export default function ElectraPage() {
     >
       {/* header + intro (verbatim) */}
       <div dangerouslySetInnerHTML={{ __html: ELECTRA_HEADER }} />
+
+      {/* archival photo of the aircraft type */}
+      <FramedPhoto
+        photo={ELECTRA_PHOTO}
+        placeholderCaption="A Lockheed Model 10 Electra — archival photo to be added"
+        aspect="16 / 9"
+        marginTop={32}
+      />
 
       {/* schematic figure */}
       <div
