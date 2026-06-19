@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 import Nav from './components/Nav'
 import FlightPage from './components/FlightPage'
+import RecordsPage from './components/RecordsPage'
 import PilotsPage from './components/PilotsPage'
 import ElectraPage from './components/ElectraPage'
 import RadioLogPage from './components/RadioLogPage'
 import TheoriesPage from './components/TheoriesPage'
 
-export type View = 'flight' | 'pilots' | 'electra' | 'lasthours' | 'theories'
+export type View = 'flight' | 'records' | 'pilots' | 'electra' | 'lasthours' | 'theories'
 
 const rootStyle: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans',system-ui,sans-serif",
@@ -42,6 +43,7 @@ export default function App() {
     <div style={rootStyle}>
       <Nav view={view} setView={setView} />
       {view === 'flight' && <FlightPage />}
+      {view === 'records' && <RecordsPage />}
       {view === 'pilots' && <PilotsPage />}
       {view === 'electra' && <ElectraPage />}
       {view === 'lasthours' && <RadioLogPage />}
