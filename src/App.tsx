@@ -3,9 +3,10 @@ import Nav from './components/Nav'
 import FlightPage from './components/FlightPage'
 import PilotsPage from './components/PilotsPage'
 import ElectraPage from './components/ElectraPage'
+import RadioLogPage from './components/RadioLogPage'
 import TheoriesPage from './components/TheoriesPage'
 
-export type View = 'flight' | 'pilots' | 'electra' | 'theories'
+export type View = 'flight' | 'pilots' | 'electra' | 'lasthours' | 'theories'
 
 const rootStyle: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans',system-ui,sans-serif",
@@ -43,6 +44,7 @@ export default function App() {
       {view === 'flight' && <FlightPage />}
       {view === 'pilots' && <PilotsPage />}
       {view === 'electra' && <ElectraPage />}
+      {view === 'lasthours' && <RadioLogPage />}
       {view === 'theories' && <TheoriesPage />}
     </div>
   )
