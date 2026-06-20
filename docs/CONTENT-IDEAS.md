@@ -15,59 +15,57 @@ prose, so "her voice" in the books is partly his — worth one honest line.
 
 ---
 
-## ✅ In progress
+## Branch / PR status (as of 2026-06-20)
 
-### 1. "The Last Hours" — interactive Itasca radio-log timeline
+| Work | Branch | PR | State |
+|---|---|---|---|
+| #1 The Last Hours | `add-last-hours-page` | #1 (base `main`) | **open, awaiting review/merge** |
+| #3 The Records + quote fix | `add-records-timeline` | #2 (stacked on #1) | **open, awaiting review/merge** |
+| #2 The Island + photos | `add-island-page` | — | **committed (`7fab71b`), NOT pushed; no PR yet** |
+
+Stacked-PR order: merge **#1 → #2**, and the stacked PRs auto-retarget to `main`. The Island branch
+still needs `git push` + a PR opened (base `add-records-timeline`).
+
+**Pending side task:** the 1937 Howland runways aerial could not be verified rights-clean — manual
+archive request prepped in [`howland-1937-aerial-request.md`](./howland-1937-aerial-request.md).
+When a file comes back with its credit line, wire it into The Island via `FramedPhoto` and update
+the sources note in `src/data/island.ts`.
+
+---
+
+## ✅ Shipped
+
+### 1. "The Last Hours" — interactive Itasca radio-log timeline  *(branch `add-last-hours-page`, PR #1)*
 The real KHAQQ ↔ *Itasca* transmissions of July 2, 1937, timestamped, building to the final
-"we are on the line 157 337." Expands the existing "Vanishing" climax from a single quote into a
-primary-source experience.
-- **Why unique:** unbuilt anywhere; data is public-domain, timestamped, small.
-- **Two signature details:** dual **GMT / Itasca-local** clocks (famous times are local, +11½h);
-  a **"variants" toggle** — multiple operators kept different logs, so marquee lines have 2–4
-  wordings ("circling" typed over "drifting" in the original). Showing that *is* the historiography.
-- **Sources:** NARA Bellarts log scan (ID 6210268,
-  https://www.archives.gov/college-park/highlights/earhart-log); TIGHAR transcriptions
-  (https://tighar.org/Projects/Earhart/Archives/Research/Bulletins/37_ItascaLogs/Itascalog.html).
+"we are on the line 157 337." Dual GMT/Itasca-local clocks; a "log variants" toggle; a play-the-night
+auto-advance; and a self-contained Web Audio radio atmosphere (breathing static + the cutter's real
+Morse "A" homing bursts — no voice ever reconstructed).
+- Files: `data/radioLog.ts`, `components/RadioLogPage.tsx`, `lib/radioAudio.ts`.
+
+### 3. "The Records" — pre-1937 record-flights page  *(branch `add-records-timeline`, PR #2)*
+Five record flights traced on an interactive globe (1928 *Friendship*; 1932 solo Atlantic; 1935
+Honolulu→Oakland; 1935 LA→Mexico City→Newark). Click a record → globe eases to center it and draws
+the arc; honest footnote covers the **uncertified** 1931 autogiro altitude.
+- Files: `data/records.ts`, `components/RecordsPage.tsx`, `lib/recordsGlobe.ts`.
+- **Quick fix (done here):** replaced the unsourced "Adventure is worthwhile in itself" on the
+  Pilots page with a verified quote from her final letter (*Last Flight*).
+
+### 2. "The Island" (Finding Howland) — the navigation problem made tangible  *(branch `add-island-page`)*
+Why a ~1.5-mile speck was nearly impossible to find after 2,556 mi. Globe intro beat (Lae→Howland) →
+a to-scale top-down **SVG** diagram driven by a five-step rail: the target (5-mi sight ring) ·
+dead reckoning (heading-error slider grows the uncertainty) · the sun line (157/337 LOP; circle
+collapses to a line; toggle a 2nd sun line for the fix they lacked) · the radio (three failed
+direction-finders) · the search (plane sweeps the line and slides past). All figures research-locked
+and cited; estimated/contested values flagged.
+- Files: `data/island.ts`, `components/IslandDiagram.tsx`, `components/IslandPage.tsx`.
+- **Photos (verified PD, eye-checked):** USFWS oblique aerial; 1937 NARA colonists'-camp photo; NASA
+  ISS orbital "speck" view — in `public/photos/howland-*.jpg`.
+- **Open follow-up:** push branch + open stacked PR; optionally add the 1937 runways aerial (see
+  pending side task above).
 
 ---
 
 ## Backlog (prioritized)
-
-### 2. "The Island" (Finding Howland) — the navigation problem made tangible  *(Tier 1, high effort — IN PROGRESS)*
-Interactive showing why finding a ~1.7-mile speck after 2,556 mi was nearly impossible: the
-dead-reckoning error cone widening with distance; why the sun-line (LOP 157/337) fixes your line
-but not your position on it; why radio direction-finding failed that morning.
-- **Why unique:** the single biggest gap online — Smithsonian only *narrates* it, never simulates.
-- **The one "aha":** a single sun line + DR uncertainty = the places you could be form a *long
-  segment of the LOP*, far bigger than the ~12 mi within which a low sandbar is even visible.
-  "Running on line north and south" was a desperate search, not a fix.
-
-**Locked design decisions (this session):**
-- **Name:** "The Island". Nav slot: right before **The Last Hours** (navigation failure → radio
-  drama → silence).
-- **Visual:** hybrid — one globe beat (Lae→Howland, reuse `recordsGlobe`) then zoom/hand off to a
-  flat, top-down **to-scale** tactical map (pixels = miles) for the actual geometry. The flat view
-  is the only honest way to show the visibility gap; orthographic can't show scale at this zoom.
-- **Tone/interactivity:** explanatory on-rails reveal of the three layers, PLUS a few honest
-  controls (drag heading error → uncertainty grows; toggle "what a 2nd sun line would've done" →
-  collapses to a fix) and one quiet "run the line" beat. Not game-like.
-- **Tech:** render the flat diagram in **SVG** (crisp lines/labels/handles); globe stays canvas.
-- **Files (planned):** `data/island.ts` (verified facts + cross-track math constants + per-stage
-  copy), `components/IslandPage.tsx`, a small SVG diagram module.
-- **Process:** focused research pass FIRST to lock numbers (island size, practical spotting
-  distance, LOP reasoning, RDF failure specifics, probable-error radius) before writing copy/scale.
-- **Phasing:** (A) research + to-scale diagram with the three layers as animated reveal — the core
-  aha; (B) the interactive sliders; (C) optional reflective "run the line" beat.
-
-### 3. "Before the World Flight" — pre-1937 records timeline  *(Tier 2, best effort:payoff)*
-Reuse the globe to trace the records most people don't know: 1928 *Friendship* (first woman across
-the Atlantic, as passenger, 20h40m — the book title); 1932 solo Atlantic (14h56m through ice and
-engine flames; first woman to solo it, first woman awarded the DFC); 1935 Honolulu→Oakland solo
-(2,408 mi open ocean, more than Lindbergh, a route that had killed others); 1935 LA→Mexico
-City→Newark.
-- **Builds on:** GlobeEngine — same rendering, new leg data.
-- **Flag:** the 1931 autogiro altitude "record" (18,415 ft) is NOT FAI/NAA-certified — label as
-  "claimed."
 
 ### 4. "The Other Amelia" — life beyond the cockpit  *(Tier 2, low effort, content-driven)*
 Gallery/essay: 1933 fashion line at Macy's (pioneered mix-and-match "separates," parachute-silk,
@@ -83,8 +81,8 @@ even an attractive cage"), and the final 1937 letter ("Women must try to do thin
 tried…"), each deep-linked to the Purdue manuscript scan.
 - **Rights:** *20 Hrs 40 Min* is US public domain (2024); *The Fun of It* under copyright until
   2028, *Last Flight* until 2033 — excerpt only.
-- **Fix to make now:** the quote "Adventure is worthwhile in itself" on the Pilots page has NO
-  primary source (popularly attributed only). Replace with a verified quote.
+- **Note:** the final-letter quote is already in use on the Pilots page (the quick fix above) — avoid
+  duplicating it verbatim as the centerpiece here.
 
 ### 6. Theories → neutral evidence ledger  *(Tier 3, upgrade existing page)*
 Recast each hypothesis as claim → supporting evidence → counter-evidence → current status. Include
@@ -103,3 +101,4 @@ thread to watch. Gives the tribute a heartbeat instead of freezing it in 1937.
 - **Wikisource** — full text of *20 Hrs 40 Min* (public domain): https://en.wikisource.org/wiki/20_Hrs._40_Min.
 - **Purdue e-Archives** — 3,500+ scans, "view the real document" deep links: https://earchives.lib.purdue.edu/digital/collection/earhart
 - **NARA** — ~16,000 pages of 1937 official records (declassified Sept 2025): https://www.archives.gov/research/amelia-earhart
+- **USFWS / NASA / NARA RG 80-CF** — public-domain Howland imagery (used on The Island).
