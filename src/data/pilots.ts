@@ -37,7 +37,8 @@ export const PILOTS: Pilot[] = [
       'She did, in 1932, flying solo and nonstop from Newfoundland to Ireland and becoming an international figure overnight. More records followed: the first solo flight from Hawaii to the U.S. mainland, the first solo from Los Angeles to Mexico City. She wrote bestselling books, helped found The Ninety-Nines — an organization of women pilots — and used her fame to argue, relentlessly, that the sky belonged to women too.',
       'The 1937 world flight was to be her last great record: the longest possible circumnavigation, hugging the equator. She was thirty-nine when the Electra lifted off from Lae for Howland Island and the ocean swallowed her radio.',
     ],
-    quote: 'Adventure is worthwhile in itself.',
+    quote:
+      'Women must try to do things as men have tried. When they fail, their failure must be but a challenge to others.',
     photo: {
       src: '/photos/earhart-pilots.jpg',
       alt: 'Studio portrait of Amelia Earhart',
