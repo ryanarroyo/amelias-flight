@@ -33,13 +33,31 @@ primary-source experience.
 
 ## Backlog (prioritized)
 
-### 2. "Finding Howland" — the navigation problem made tangible  *(Tier 1, high effort)*
-Interactive showing why finding a 1.5-mile speck after 2,556 mi was nearly impossible: the
+### 2. "The Island" (Finding Howland) — the navigation problem made tangible  *(Tier 1, high effort — IN PROGRESS)*
+Interactive showing why finding a ~1.7-mile speck after 2,556 mi was nearly impossible: the
 dead-reckoning error cone widening with distance; why the sun-line (LOP 157/337) fixes your line
 but not your position on it; why radio direction-finding failed that morning.
 - **Why unique:** the single biggest gap online — Smithsonian only *narrates* it, never simulates.
-- **Builds on:** the Electra schematic page + GlobeEngine.
-- **Effort:** highest. Scope carefully.
+- **The one "aha":** a single sun line + DR uncertainty = the places you could be form a *long
+  segment of the LOP*, far bigger than the ~12 mi within which a low sandbar is even visible.
+  "Running on line north and south" was a desperate search, not a fix.
+
+**Locked design decisions (this session):**
+- **Name:** "The Island". Nav slot: right before **The Last Hours** (navigation failure → radio
+  drama → silence).
+- **Visual:** hybrid — one globe beat (Lae→Howland, reuse `recordsGlobe`) then zoom/hand off to a
+  flat, top-down **to-scale** tactical map (pixels = miles) for the actual geometry. The flat view
+  is the only honest way to show the visibility gap; orthographic can't show scale at this zoom.
+- **Tone/interactivity:** explanatory on-rails reveal of the three layers, PLUS a few honest
+  controls (drag heading error → uncertainty grows; toggle "what a 2nd sun line would've done" →
+  collapses to a fix) and one quiet "run the line" beat. Not game-like.
+- **Tech:** render the flat diagram in **SVG** (crisp lines/labels/handles); globe stays canvas.
+- **Files (planned):** `data/island.ts` (verified facts + cross-track math constants + per-stage
+  copy), `components/IslandPage.tsx`, a small SVG diagram module.
+- **Process:** focused research pass FIRST to lock numbers (island size, practical spotting
+  distance, LOP reasoning, RDF failure specifics, probable-error radius) before writing copy/scale.
+- **Phasing:** (A) research + to-scale diagram with the three layers as animated reveal — the core
+  aha; (B) the interactive sliders; (C) optional reflective "run the line" beat.
 
 ### 3. "Before the World Flight" — pre-1937 records timeline  *(Tier 2, best effort:payoff)*
 Reuse the globe to trace the records most people don't know: 1928 *Friendship* (first woman across
