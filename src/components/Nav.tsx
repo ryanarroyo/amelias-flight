@@ -57,8 +57,10 @@ export default function Nav({ view, setView }: { view: View; setView: (v: View) 
         onClick={() => setView('flight')}
         style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 9 }}
       >
-        <span
-          style={{ width: 7, height: 7, borderRadius: '50%', background: '#B23A33', display: 'inline-block' }}
+        <img
+          src="/logo.png"
+          alt="Amelia's Flight logo"
+          style={{ height: 44, width: 'auto', display: 'block' }}
         />
         <span style={{ fontFamily: "'Newsreader',serif", fontSize: 17, letterSpacing: '0.01em' }}>
           Amelia's Flight
