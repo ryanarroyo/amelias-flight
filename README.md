@@ -30,6 +30,29 @@ npm run build    # typecheck + production build
 npm run preview  # serve the production build
 ```
 
+## Contact form
+
+The footer's **"Send a message"** opens an in-theme dialog that posts to the Vercel
+serverless function in [`api/contact.ts`](./api/contact.ts), which emails you via
+[Resend](https://resend.com). Your address is never shipped to the browser — it lives only
+in the `CONTACT_TO_EMAIL` server env var. Spam is filtered in layers: honeypot field, a
+sub-3s timing trap, **Cloudflare Turnstile** (verified server-side), server-side validation,
+and a best-effort per-IP rate limit.
+
+Set these in **Vercel → Project → Settings → Environment Variables** (and in `.env.local`
+for local `vercel dev`). See [`.env.example`](./.env.example):
+
+| Variable | Where | Notes |
+| --- | --- | --- |
+| `RESEND_API_KEY` | server | Resend API key (free tier: 3,000 emails/mo) |
+| `CONTACT_TO_EMAIL` | server | Inbox that receives messages |
+| `TURNSTILE_SECRET_KEY` | server | Cloudflare Turnstile secret key |
+| `VITE_TURNSTILE_SITE_KEY` | client | Turnstile site key (public); falls back to Cloudflare's test key in dev |
+| `CONTACT_FROM` | server | Optional. Defaults to Resend's onboarding sender |
+
+The `/api` function runs on Vercel; `npm run preview` serves only static files, so use
+`vercel dev` to exercise the endpoint locally.
+
 ## Project layout
 
 ```

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { GlobeEngine } from '../lib/GlobeEngine'
 import { CARDS } from '../lib/cards'
 import StepCard from './StepCard'
+import ContactDialog from './ContactDialog'
 
 const mono: CSSProperties = { fontFamily: "'IBM Plex Mono',monospace" }
 const serif: CSSProperties = { fontFamily: "'Newsreader',serif" }
@@ -23,6 +24,7 @@ const divider: CSSProperties = { width: 1, background: 'rgba(28,27,24,0.1)' }
 
 export default function FlightPage() {
   const [showTransmission, setShowTransmission] = useState(false)
+  const [contactOpen, setContactOpen] = useState(false)
 
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const storyRef = useRef<HTMLDivElement>(null)
@@ -344,12 +346,43 @@ export default function FlightPage() {
               Routes are drawn as great-circle approximations between recorded stops; distances and dates
               follow the published log and may vary slightly across sources.
             </p>
-            <div style={{ ...serif, fontStyle: 'italic', fontSize: 16, color: '#1c1b18' }}>
-              Built as a tribute.
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'baseline',
+                justifyContent: 'space-between',
+                gap: 16,
+                flexWrap: 'wrap',
+              }}
+            >
+              <div style={{ ...serif, fontStyle: 'italic', fontSize: 16, color: '#1c1b18' }}>
+                Built as a tribute.
+              </div>
+              <button
+                onClick={() => setContactOpen(true)}
+                style={{
+                  appearance: 'none',
+                  border: 0,
+                  background: 'none',
+                  cursor: 'pointer',
+                  font: 'inherit',
+                  ...mono,
+                  fontSize: 11,
+                  letterSpacing: '0.16em',
+                  textTransform: 'uppercase',
+                  color: '#B23A33',
+                  padding: '4px 0',
+                  borderBottom: '1px solid rgba(178,58,51,0.4)',
+                }}
+              >
+                Send a message
+              </button>
             </div>
           </div>
         </footer>
       </div>
+
+      <ContactDialog open={contactOpen} onClose={() => setContactOpen(false)} />
     </div>
   )
 }

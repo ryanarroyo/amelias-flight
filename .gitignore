@@ -8,3 +8,9 @@ vite.config.d.ts
 
 # Design handoff scratch (original bundle from claude.ai/design)
 .design-src/
+
+# Local env / secrets (keep .env.example tracked)
+.env
+.env.local
+.env*.local
+.vercel
