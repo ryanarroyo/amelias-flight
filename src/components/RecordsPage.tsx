@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { RECORDS, RECORDS_INTRO, RECORDS_NOTE } from '../data/records'
+import SiteFooter from './SiteFooter'
 import { RecordsGlobe } from '../lib/recordsGlobe'
 
 const mono: CSSProperties = { fontFamily: "'IBM Plex Mono',monospace" }
@@ -176,9 +177,7 @@ export default function RecordsPage() {
         </div>
       </div>
 
-      <div style={{ ...serif, fontStyle: 'italic', fontSize: 15, color: '#756f64', marginTop: 54 }}>
-        Built as a tribute.
-      </div>
+      <SiteFooter marginTop={54} />
     </div>
   )
 }

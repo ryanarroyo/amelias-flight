@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
+import SiteFooter from './SiteFooter'
 import { RADIO_ENTRIES, RADIO_INTRO } from '../data/radioLog'
 import type { LogEntry, Speaker } from '../data/radioLog'
 import { createRadioAudio } from '../lib/radioAudio'
@@ -447,9 +448,7 @@ export default function RadioLogPage() {
           cutter’s actual Morse homing signal — the letter “A” keyed on 7500 kHz — never a
           reconstructed voice.
         </p>
-        <div style={{ ...serif, fontStyle: 'italic', fontSize: 15, color: '#756f64', marginTop: 30 }}>
-          Built as a tribute.
-        </div>
+        <SiteFooter marginTop={30} />
       </div>
     </div>
   )

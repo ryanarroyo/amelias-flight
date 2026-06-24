@@ -70,7 +70,7 @@ export default function Nav({ view, setView }: { view: View; setView: (v: View) 
         <NavButton label="The Flight" active={view === 'flight'} onClick={() => setView('flight')} />
         <NavButton label="The Records" active={view === 'records'} onClick={() => setView('records')} />
         <NavButton label="The Pilots" active={view === 'pilots'} onClick={() => setView('pilots')} />
-        <NavButton label="The Electra" active={view === 'electra'} onClick={() => setView('electra')} />
+        <NavButton label="The Plane" active={view === 'electra'} onClick={() => setView('electra')} />
         <NavButton label="The Island" active={view === 'island'} onClick={() => setView('island')} />
         <NavButton label="The Last Hours" active={view === 'lasthours'} onClick={() => setView('lasthours')} />
         <NavButton label="The Archives" active={view === 'archives'} onClick={() => setView('archives')} />

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
+import SiteFooter from './SiteFooter'
 import {
   ISLAND,
   ISLAND_INTRO,
@@ -387,7 +388,7 @@ export default function IslandPage() {
       </div>
 
       <p style={{ fontSize: 12.5, lineHeight: 1.7, color: '#756f64', margin: '36px 0 0' }}>{ISLAND_SOURCES}</p>
-      <div style={{ ...serif, fontStyle: 'italic', fontSize: 15, color: '#756f64', marginTop: 30 }}>Built as a tribute.</div>
+      <SiteFooter marginTop={30} />
     </div>
   )
 }

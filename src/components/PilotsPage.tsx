@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import SiteFooter from './SiteFooter'
 import { PILOTS, PILOTS_INTRO } from '../data/pilots'
 import FramedPhoto from './FramedPhoto'
 
@@ -125,9 +126,7 @@ export default function PilotsPage() {
         </section>
       ))}
 
-      <div style={{ ...serif, fontStyle: 'italic', fontSize: 15, color: '#756f64', marginTop: 54 }}>
-        Built as a tribute.
-      </div>
+      <SiteFooter marginTop={54} />
     </div>
   )
 }
