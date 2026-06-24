@@ -7,8 +7,9 @@ import ElectraPage from './components/ElectraPage'
 import IslandPage from './components/IslandPage'
 import RadioLogPage from './components/RadioLogPage'
 import TheoriesPage from './components/TheoriesPage'
+import ArchivesPage from './components/ArchivesPage'
 
-export type View = 'flight' | 'records' | 'pilots' | 'electra' | 'island' | 'lasthours' | 'theories'
+export type View = 'flight' | 'records' | 'pilots' | 'electra' | 'island' | 'lasthours' | 'theories' | 'archives'
 
 const rootStyle: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans',system-ui,sans-serif",
@@ -50,6 +51,7 @@ export default function App() {
       {view === 'island' && <IslandPage />}
       {view === 'lasthours' && <RadioLogPage />}
       {view === 'theories' && <TheoriesPage />}
+      {view === 'archives' && <ArchivesPage />}
     </div>
   )
 }
