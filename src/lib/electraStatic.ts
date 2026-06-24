@@ -63,5 +63,4 @@ export const ELECTRA_BODY = `
     </div>
 
     <p style="font-size:12.5px;line-height:1.7;color:#756f64;margin:46px 0 0;border-top:1px solid rgba(28,27,24,0.1);padding-top:22px;">Airframe figures from <em>Jane's All the World's Aircraft, 1937</em>, via Wikipedia. Performance figures are typical published values for the 600 hp Model 10-E and vary across sources; Earhart's ferry range reflects her aircraft's added cabin tankage. Schematic is diagrammatic and not to scale.</p>
-    <div style="font-family:'Newsreader',serif;font-style:italic;font-size:15px;color:#756f64;margin-top:18px;">Built as a tribute.</div>
 `;

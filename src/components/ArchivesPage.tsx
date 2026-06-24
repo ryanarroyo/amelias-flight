@@ -1,4 +1,5 @@
 import { useEffect, useState, type CSSProperties } from 'react'
+import SiteFooter from './SiteFooter'
 import {
   ARCHIVE_PLATES,
   ARCHIVES_INTRO,
@@ -207,7 +208,7 @@ export default function ArchivesPage() {
         markings intact. Several prints originated as U.S. Navy (Fleet Air Base, Pearl Harbor) and
         U.S. Department of the Interior photographs.
       </p>
-      <div style={{ ...serif, fontStyle: 'italic', fontSize: 15, color: '#756f64', marginTop: 28 }}>Built as a tribute.</div>
+      <SiteFooter marginTop={28} />
     </div>
   )
 }

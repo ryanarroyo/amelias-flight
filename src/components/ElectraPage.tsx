@@ -3,6 +3,7 @@ import { PLAN_SVG, BLUEPRINT_SVG, PERSPECTIVE_SVG } from '../lib/electraSvgs'
 import { ELECTRA_HEADER, ELECTRA_BODY } from '../lib/electraStatic'
 import type { PhotoData } from '../lib/photo'
 import FramedPhoto from './FramedPhoto'
+import SiteFooter from './SiteFooter'
 
 type Schematic = 'plan' | 'blueprint' | 'persp'
 
@@ -110,6 +111,8 @@ export default function ElectraPage() {
 
       {/* gauges + spec table + features + note (verbatim) */}
       <div dangerouslySetInnerHTML={{ __html: ELECTRA_BODY }} />
+
+      <SiteFooter marginTop={40} />
     </div>
   )
 }

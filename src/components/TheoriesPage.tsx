@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import SiteFooter from './SiteFooter'
 import { THEORIES } from '../data/amelia'
 import type { PhotoData } from '../lib/photo'
 import FramedPhoto from './FramedPhoto'
@@ -114,9 +115,7 @@ export default function TheoriesPage() {
       <p style={{ fontSize: 'clamp(16px,1.9vw,19px)', lineHeight: 1.7, color: '#3a372f', margin: '36px 0 0' }}>
         {THEORIES.closing}
       </p>
-      <div style={{ ...serif, fontStyle: 'italic', fontSize: 15, color: '#756f64', marginTop: 46 }}>
-        Built as a tribute.
-      </div>
+      <SiteFooter marginTop={46} />
     </div>
   )
 }
