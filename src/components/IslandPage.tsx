@@ -22,10 +22,16 @@ const AERIAL_PHOTO: PhotoData = {
   credit: 'U.S. Fish & Wildlife Service',
 }
 const CAMP_PHOTO: PhotoData = {
-  src: '/photos/howland-camp-1937.jpg',
-  alt: 'Black-and-white 1937 photograph of the small colonists’ camp on flat, low Howland Island',
-  caption: 'The colonists’ camp, Howland, January 1937 — they graded the runways and waited',
-  credit: 'U.S. National Archives',
+  src: '/photos/archives/arch-10-front.jpg',
+  alt: 'A U.S. flag on a central flagpole flanked by two wood-frame shacks and a tent at the Howland colonists’ camp, 1937',
+  caption: 'The colonists’ camp, Howland, 1937 — they graded the runways and waited',
+  credit: 'Smithsonian Institution Archives',
+}
+const LIGHT_PHOTO: PhotoData = {
+  src: '/photos/archives/arch-01-front.jpg',
+  alt: 'The white masonry day-beacon known as the Earhart Light on Howland, a Coast Guard cutter offshore, November 1937',
+  caption: 'The “Earhart Light” on Howland, November 1937 — a beacon named for the aviator who never arrived',
+  credit: 'Smithsonian Institution Archives',
 }
 const ORBIT_PHOTO: PhotoData = {
   src: '/photos/howland-iss-nasa.jpg',
@@ -367,6 +373,17 @@ export default function IslandPage() {
 
       <div style={{ maxWidth: 720, marginTop: 22 }}>
         <FramedPhoto photo={ORBIT_PHOTO} aspect="16 / 9" marginTop={0} />
+      </div>
+
+      <p style={{ fontSize: 'clamp(16px,1.9vw,19px)', lineHeight: 1.7, color: '#3a372f', margin: '40px 0 0', maxWidth: 720 }}>
+        Months later a day-beacon went up on the island, named the “Earhart Light.” It marked a
+        landfall for a flight that never came — and still stands. The full folder of the colonists’
+        own photographs, fronts and annotated backs, is gathered in{' '}
+        <span style={{ color: ACCENT }}>The Archives</span>.
+      </p>
+
+      <div style={{ maxWidth: 720, marginTop: 22 }}>
+        <FramedPhoto photo={LIGHT_PHOTO} aspect="5 / 4" marginTop={0} />
       </div>
 
       <p style={{ fontSize: 12.5, lineHeight: 1.7, color: '#756f64', margin: '36px 0 0' }}>{ISLAND_SOURCES}</p>
