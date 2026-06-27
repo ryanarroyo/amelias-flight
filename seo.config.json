@@ -1,0 +1,90 @@
+{
+  "siteUrl": "https://ameliasflight.com",
+  "siteName": "Amelia's Flight",
+  "locale": "en_US",
+  "defaultOgImage": "/photos/og-cover.jpg",
+  "ogImageAlt": "Amelia Earhart and her Lockheed Electra, 1937",
+  "twitterCard": "summary_large_image",
+  "routes": [
+    {
+      "view": "flight",
+      "path": "/",
+      "slug": "index",
+      "title": "Amelia's Flight — The 1937 World Flight",
+      "description": "An interactive tribute to Amelia Earhart's 1937 around-the-world flight, traced leg by leg on a rotating globe — twenty-nine legs across ocean and desert, and the final dawn she never crossed.",
+      "heading": "Amelia's Flight: The 1937 World Flight",
+      "summary": "A scroll-driven retelling of Amelia Earhart's 1937 attempt to circle the globe along the equator, told one leg at a time on a rotating map — from Oakland and Miami, across the Caribbean, Africa, Asia, and the Pacific, to the last leg toward Howland Island.",
+      "keywords": "Amelia Earhart, 1937 world flight, Lockheed Electra, around the world flight, Fred Noonan, aviation history"
+    },
+    {
+      "view": "records",
+      "path": "/records",
+      "slug": "records",
+      "title": "The Records — Amelia Earhart's Aviation Firsts | Amelia's Flight",
+      "description": "Amelia Earhart's record-setting flights and aviation firsts — the achievements that made the 1937 world flight the capstone of a record-breaking career.",
+      "heading": "The Records",
+      "summary": "Amelia Earhart's aviation records and firsts — from her solo Atlantic crossing to her transcontinental and Pacific records — the milestones that led to the 1937 around-the-world attempt.",
+      "keywords": "Amelia Earhart records, aviation firsts, solo Atlantic flight, women in aviation"
+    },
+    {
+      "view": "pilots",
+      "path": "/pilots",
+      "slug": "pilots",
+      "title": "The Pilots — Amelia Earhart & Fred Noonan | Amelia's Flight",
+      "description": "The two aviators aboard the Lockheed Electra: pilot Amelia Earhart and navigator Fred Noonan, the pair who set out to fly around the world in 1937.",
+      "heading": "The Pilots",
+      "summary": "Profiles of Amelia Earhart, the record-setting aviator, and Fred Noonan, her expert celestial navigator — the two people aboard the Lockheed Electra on the 1937 world flight.",
+      "keywords": "Amelia Earhart, Fred Noonan, navigator, Lockheed Electra crew"
+    },
+    {
+      "view": "electra",
+      "path": "/electra",
+      "slug": "electra",
+      "title": "The Plane — Lockheed Model 10-E Electra (NR16020) | Amelia's Flight",
+      "description": "Amelia Earhart's aircraft: the twin-engine Lockheed Model 10-E Electra, registration NR16020, the 'Flying Laboratory' she flew on the 1937 world flight.",
+      "heading": "The Plane",
+      "summary": "The Lockheed Model 10-E Electra (NR16020) — the twin-engine all-metal monoplane, modified as a 'Flying Laboratory' with extra fuel tanks, that carried Amelia Earhart and Fred Noonan on the 1937 around-the-world attempt.",
+      "keywords": "Lockheed Electra, Model 10-E, NR16020, Flying Laboratory, Amelia Earhart plane"
+    },
+    {
+      "view": "island",
+      "path": "/island",
+      "slug": "island",
+      "title": "The Island — Howland Island, the Destination Never Reached | Amelia's Flight",
+      "description": "Howland Island: the tiny speck of Pacific coral that was Amelia Earhart's intended landfall on July 2, 1937, and the airstrip she never reached.",
+      "heading": "The Island",
+      "summary": "Howland Island — a flat, two-mile sliver of coral in the central Pacific where a crushed-coral airstrip and the cutter Itasca waited for Amelia Earhart on July 2, 1937. She never arrived.",
+      "keywords": "Howland Island, Itasca, Pacific, Amelia Earhart destination, 1937"
+    },
+    {
+      "view": "lasthours",
+      "path": "/last-hours",
+      "slug": "last-hours",
+      "title": "The Last Hours — Earhart's Final Radio Transmissions | Amelia's Flight",
+      "description": "The final hours of the 1937 flight reconstructed from the USCGC Itasca's radio log — Amelia Earhart's last messages before the Lockheed Electra vanished.",
+      "heading": "The Last Hours",
+      "summary": "A reconstruction of Amelia Earhart's final radio transmissions on July 2, 1937, drawn from the radio log of the Coast Guard cutter Itasca — the fading calls for a position fix in the hours before the Electra disappeared.",
+      "keywords": "Amelia Earhart last transmission, Itasca radio log, final hours, 1937 disappearance"
+    },
+    {
+      "view": "archives",
+      "path": "/archives",
+      "slug": "archives",
+      "title": "The Archives — Photographs & Documents | Amelia's Flight",
+      "description": "An archive of photographs, documents, postal covers, and ephemera from Amelia Earhart's 1937 world flight and the search that followed.",
+      "heading": "The Archives",
+      "summary": "Archival photographs, documents, flight covers, markings, and stamps connected to Amelia Earhart's 1937 world flight and the subsequent search.",
+      "keywords": "Amelia Earhart archives, photographs, flight covers, documents, 1937"
+    },
+    {
+      "view": "theories",
+      "path": "/theories",
+      "slug": "theories",
+      "title": "The Theories — What Happened to Amelia Earhart | Amelia's Flight",
+      "description": "The leading theories of Amelia Earhart's 1937 disappearance — crash-and-sink, the Nikumaroro castaway hypothesis, capture at Saipan, and more — weighed side by side.",
+      "heading": "The Theories",
+      "summary": "The competing explanations for Amelia Earhart's disappearance: the official crash-and-sink theory, the TIGHAR Nikumaroro castaway hypothesis, the Marshall Islands and Saipan capture claims, the espionage theory, and the survival legends — each summarized and assessed.",
+      "keywords": "Amelia Earhart theories, disappearance, Nikumaroro, TIGHAR, crash and sink, Saipan"
+    }
+  ]
+}

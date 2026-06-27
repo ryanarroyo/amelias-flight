@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { applyMeta, pathForView, viewFromPath } from './lib/seo'
 import Nav from './components/Nav'
 import FlightPage from './components/FlightPage'
 import RecordsPage from './components/RecordsPage'
@@ -20,20 +21,36 @@ const rootStyle: React.CSSProperties = {
 }
 
 export default function App() {
-  const [view, setViewState] = useState<View>('flight')
+  // Initialise from the URL so a hard load of e.g. /theories opens that view.
+  const [view, setViewState] = useState<View>(() =>
+    typeof window === 'undefined' ? 'flight' : viewFromPath(window.location.pathname),
+  )
 
   const setView = (v: View) => {
     if (v === view) return
     setViewState(v)
+    const path = pathForView(v)
     try {
+      if (window.location.pathname !== path) {
+        window.history.pushState({ view: v }, '', path)
+      }
       window.scrollTo(0, 0)
     } catch {
       /* noop */
     }
   }
 
-  // Always start each view at the top.
+  // Keep the view in sync with browser back/forward navigation.
   useEffect(() => {
+    const onPop = () => setViewState(viewFromPath(window.location.pathname))
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
+  }, [])
+
+  // Always start each view at the top, and keep document title / meta tags in
+  // sync with the active view during client-side navigation.
+  useEffect(() => {
+    applyMeta(view)
     try {
       window.scrollTo(0, 0)
     } catch {
