@@ -1,5 +1,14 @@
-import type { CSSProperties } from 'react'
+import type { CSSProperties, MouseEvent } from 'react'
 import type { View } from '../App'
+import { pathForView } from '../lib/seo'
+
+/** Intercept plain left-clicks for client-side nav; let modified clicks
+ *  (new tab, etc.) and the canonical href behave normally for crawlers. */
+function handleNav(e: MouseEvent<HTMLAnchorElement>, go: () => void) {
+  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return
+  e.preventDefault()
+  go()
+}
 
 const navStyle: CSSProperties = {
   position: 'fixed',
@@ -28,6 +37,7 @@ const btnBase: CSSProperties = {
   letterSpacing: '0.16em',
   textTransform: 'uppercase',
   color: '#1c1b18',
+  textDecoration: 'none',
   padding: '6px 2px',
   position: 'relative',
 }
@@ -41,21 +51,45 @@ const underline: CSSProperties = {
   background: '#B23A33',
 }
 
-function NavButton({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
+function NavButton({
+  label,
+  view,
+  active,
+  onSelect,
+}: {
+  label: string
+  view: View
+  active: boolean
+  onSelect: (v: View) => void
+}) {
   return (
-    <button onClick={onClick} style={btnBase}>
+    <a
+      href={pathForView(view)}
+      onClick={(e) => handleNav(e, () => onSelect(view))}
+      aria-current={active ? 'page' : undefined}
+      style={btnBase}
+    >
       {label}
       {active && <span style={underline} />}
-    </button>
+    </a>
   )
 }
 
 export default function Nav({ view, setView }: { view: View; setView: (v: View) => void }) {
   return (
     <nav style={navStyle}>
-      <div
-        onClick={() => setView('flight')}
-        style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 9 }}
+      <a
+        href={pathForView('flight')}
+        onClick={(e) => handleNav(e, () => setView('flight'))}
+        aria-label="Amelia's Flight — home"
+        style={{
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          gap: 9,
+          color: 'inherit',
+          textDecoration: 'none',
+        }}
       >
         <img
           src="/logo.png"
@@ -65,16 +99,16 @@ export default function Nav({ view, setView }: { view: View; setView: (v: View) 
         <span style={{ fontFamily: "'Newsreader',serif", fontSize: 17, letterSpacing: '0.01em' }}>
           Amelia's Flight
         </span>
-      </div>
+      </a>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-end', gap: '8px 16px' }}>
-        <NavButton label="The Flight" active={view === 'flight'} onClick={() => setView('flight')} />
-        <NavButton label="The Records" active={view === 'records'} onClick={() => setView('records')} />
-        <NavButton label="The Pilots" active={view === 'pilots'} onClick={() => setView('pilots')} />
-        <NavButton label="The Plane" active={view === 'electra'} onClick={() => setView('electra')} />
-        <NavButton label="The Island" active={view === 'island'} onClick={() => setView('island')} />
-        <NavButton label="The Last Hours" active={view === 'lasthours'} onClick={() => setView('lasthours')} />
-        <NavButton label="The Archives" active={view === 'archives'} onClick={() => setView('archives')} />
-        <NavButton label="The Theories" active={view === 'theories'} onClick={() => setView('theories')} />
+        <NavButton label="The Flight" view="flight" active={view === 'flight'} onSelect={setView} />
+        <NavButton label="The Records" view="records" active={view === 'records'} onSelect={setView} />
+        <NavButton label="The Pilots" view="pilots" active={view === 'pilots'} onSelect={setView} />
+        <NavButton label="The Plane" view="electra" active={view === 'electra'} onSelect={setView} />
+        <NavButton label="The Island" view="island" active={view === 'island'} onSelect={setView} />
+        <NavButton label="The Last Hours" view="lasthours" active={view === 'lasthours'} onSelect={setView} />
+        <NavButton label="The Archives" view="archives" active={view === 'archives'} onSelect={setView} />
+        <NavButton label="The Theories" view="theories" active={view === 'theories'} onSelect={setView} />
       </div>
     </nav>
   )
